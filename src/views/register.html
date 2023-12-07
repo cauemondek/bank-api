@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco | Cadastro</title>
+
+    <link rel="stylesheet" href="./css/register.css">
+
+    <script src="https://kit.fontawesome.com/dc49a974a4.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine&family=Inder&family=Manrope:wght@200;500&family=Montserrat:wght@200;300;500&family=Noto+Sans+JP:wght@200;400;500&family=Nunito&family=Poppins:wght@200;300;500;700;800&family=Roboto:wght@100;400&family=Sen:wght@700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+        
+        <div class="welcomeContainer">
+            <div class="paragraph">
+                <h1>Abra sua conta e tenha acesso a todos os nossos <span style="color: #f16d25;">serviços</span> !</h1>
+                <h2>Cadastre-se para iniciar sua nova área de usuário.</h2>
+            </div>
+    
+        </div>
+        <article class="registerContainer">
+            <img src="./imgs/registerilu.svg" alt="" srcset="" class="ilustrationIMG">
+            <form method="post" class="registerform">
+                <div class="inputsform">
+                    <i class="fa-regular fa-user iconDescription"></i>
+                    <input type="text" name="user" class="inputUser" required>
+                    <label>Usuário</label>
+                </div>
+                <div class="inputsform">
+                    <i class="fa-regular fa-envelope iconDescription"></i>
+                    <input type="text" name="email" class="inputEmail" required>
+                    <label>Email</label>
+                </div>
+                <div class="inputsform">
+                    <i class="fa-solid fa-lock iconDescription"></i>
+                    <input type="password" name="password" class="inputPassword" required>
+                    <i class="fa-solid fa-eye viewPassword" style="color: #ffffffaf;"></i>
+                    <label>Senha</label>
+                </div>
+                <div class="error">
+                    <p id="error"><%= errorCadastro %></p>
+                </div>
+                <div class="submitsform">
+                    <a href="/login">Já possuo conta</a>
+                    <input type="submit" name="acao" value="Cadastrar">
+                </div>
+            </form>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; Cauê Guise Mondek - Todos os direitos reservados, <span id="ano"></span></p>
+    </footer>
+
+    <script src="./appRegister.js"></script>
+</body>
+</html>

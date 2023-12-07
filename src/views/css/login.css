@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+    
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+
+    /* border: solid 1px red; */
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #4c12e8
+}
+
+
+label {
+    color: #fff;
+}
+
+main {
+    height: 97.4vh;
+
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.welcomeContainer {
+    width: 65%;
+
+    align-items: center;
+    justify-content: start;
+    display: flex;
+    user-select: none;
+}
+
+.welcomeContainer h1 {
+    font-weight: 300;
+    color: #ffffffe1;
+}
+
+.welcomeContainer h2 {
+    font-weight: 100;
+    color: #ffffffaf;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.loginContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 1500px;
+    height: 500px;
+}
+
+.loginform {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 300px;
+    width: 325px;
+}
+
+.inputsform {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.inputsform label {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    transition: 0.3s ease-in-out;
+    z-index: -1;
+
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.loginContainer .inputsform input:focus ~ label,
+.loginContainer .inputsform input:valid ~ label {
+    color: #ffb91a;
+    font-size: 15px;
+    top: -32px;
+    left: 0;
+}
+
+.inputsform input {
+    background-color: transparent;
+    border-bottom: 1px solid #ffffffaf;
+    
+    caret-color: #ffffffaf;;
+    color: #fff;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 4px 30px;
+}
+.inputsform input:focus {
+    background-color: transparent;
+    outline: 0;
+}
+
+.submitsform {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+    margin-top: 10px;
+}
+
+.submitsform input {
+    background-color: #ffb91a;
+    cursor: pointer;
+    padding: 7px;
+    width: 130px;
+    height: 45px;
+    border-radius: 4px;
+
+    font-size: 15px;
+
+    transition: 0.3s ease-in-out;
+}
+.submitsform input:hover {
+    /* background-color: #1b1c1e; */
+    background-color: #eee;
+    color: #f16d25;
+}
+.submitsform a {
+    color: #ffffffaf;
+    cursor: pointer;
+    padding: 7px;
+    width: 112px;
+    height: 27px;
+    border-radius: 4px;
+
+    border: solid 2px #ffffffaf;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+
+    transition: 0.3s ease-in-out;
+}
+.submitsform a:hover {
+    color: #ffffff;
+    border: solid 2px #ffffff;
+}
+
+.ilustrationIMG {
+    width: 35%;
+}
+
+.iconDescription {
+    position: absolute;
+    top: 17px;    
+}
+
+.viewPassword {
+    position: absolute;
+    top: 17px;   
+    left: 300px;
+
+    visibility: hidden;
+
+    cursor: pointer;
+}
+
+.loginContainer .inputsform input:valid ~ .viewPassword{
+    visibility: visible;
+}
+
+footer {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+footer p, footer span {
+    cursor: default;
+    color: #ffffffaf;
+    font-weight: 100;
+    user-select: none;
+}
+
+.error {
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.error p {
+    color: #c01418;
+}
+
+.fa-lock, .fa-user {
+    color: #ffffffaf;
+}

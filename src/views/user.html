@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco | Usuário</title>
+
+    <link rel="stylesheet" href="./css/user.css">
+
+    <script src="https://kit.fontawesome.com/dc49a974a4.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine&family=Inder&family=Manrope:wght@200;500&family=Montserrat:wght@200;300;500&family=Noto+Sans+JP:wght@200;400;500&family=Nunito&family=Poppins:wght@200;300;500;700;800&family=Roboto:wght@100;400&family=Sen:wght@700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li>
+                <div class="navProfile">
+                    <img src="<%= iconUser %>" alt="" id="iconProfile">
+                    <div class="profileNames">
+                        <p><%= login %></p>
+                        <span><%= email %></span>
+                    </div>
+
+                </div>
+            </li>
+            <li class="buttonNav">
+                <div>
+                    <i class="fa-regular fa-user navIcon"></i>
+                    <span class="navItem">Conta</span>
+                </div>
+            </li>
+            <li class="buttonNav">
+                <div>
+                    <i class="fa-solid fa-gear navIcon"></i>
+                    <span class="navItem">Configurações</span>
+                </div>
+            </li>
+            <li>
+                <div id="exit">
+                    <i class="fa-solid fa-right-from-bracket navIcon"></i>
+                    <span class="navItem">Sair</span>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+
+    <header>
+        <h2>Bem-vindo de volta <span style="color: #f16d25;"><%= login %></span> !</h2>
+        <div class="viewCash">
+            <p>Saldo disponível</p>
+            <h1>R$ <%= cash %></h1>
+        </div>
+    </header>
+    <article class="payContainer">
+
+        <div class="card">
+            <img src="./imgs/creditcardilu.svg" alt="">
+            <div class="descCard">
+                <p>Seu código de segurança</p>
+                <h2 id="userKey"><%= key %></h2>
+            </div>
+        </div>
+
+        <div class="transferenceButtonBox buttonNav">
+            <i class="fa-solid fa-hand-holding-dollar fa-2xl"></i>
+            <h2>Nova transferência</h2>
+        </div>
+    </article>
+
+    <div class="navPageContainer">
+        <div class="opacityEffect"></div>
+        <article class="navPage">
+            <i class="fa-solid fa-xmark fa-2xl closeNavPage"></i>
+            <div class="titleNavPage">
+                <i class="fa-regular fa-user fa-xl navIcon"></i>
+                <h2>Conta</h2>
+            </div>
+
+            <ul class="navPageDate">
+                <li>
+                    <p>Foto de perfil</p>
+                    <span id="filePreview"><%= iconUserName %></span>
+                    <label for="profileFile">
+                        <i class="fa-solid fa-upload fa-lg"></i>
+                        Enviar arquivo
+                    </label>
+                    <input type="file" name="profileFile" id="profileFile" accept="image/*" max-size="40000">
+                </li>
+                <li>
+                    <p>Nome de usuário</p>
+                    <span class="previewInput"><%= login %></span>
+                    <input type="text" value="<%= login %>" class="changeUserData" id="userChange">
+                    <i class="fa-regular fa-pen-to-square fa-lg"></i>
+                </li>
+                <li>
+                    <p>Email</p>
+                    <span class="previewInput"><%= email %></span>
+                    <input type="text" value="<%= email %>" class="changeUserData" id="emailChange">
+                    <i class="fa-regular fa-pen-to-square fa-lg"></i>
+                </li>
+                <li>
+                    <p>Senha atual</p>
+                    <span class="previewInput"><%= password %></span>
+                    <input type="text" value="<%= password %>" class="changeUserData" id="passwordChange">
+                    <i class="fa-regular fa-pen-to-square fa-lg"></i>
+                </li>
+            </ul>
+
+            <div class="buttonContainer">
+                <span class="loadingUser"></span>
+                <button id="changeProfile">Salvar</button>
+            </div>
+        </article>
+    </div>
+
+    <div class="navPageContainer">
+        <div class="opacityEffect"></div>
+        <article class="navPage">
+            <i class="fa-solid fa-xmark fa-2xl closeNavPage"></i>
+            <div class="titleNavPage">
+                <i class="fa-solid fa-gear fa-xl navIcon"></i>
+                <h2>Configurações</h2>
+            </div>
+
+            <ul class="navPageDate">
+                <div>
+                    <h3>Exclua sua conta</h3>
+                    <p>Essa ação é permanente e não pode ser desfeita, você perderá todos seus dados.</p>
+                </div>
+            </ul>
+    
+            <div class="buttonContainer">
+                <span class="loadingDelete"></span>
+                <button id="deleteAccount">
+                    <i class="fa-solid fa-trash"></i>
+                    Excluir
+                </button>
+            </div>
+
+        </article>
+    </div>
+        
+    <div class="navPageContainer">
+        <div class="opacityEffect"></div>
+        <article class="transferPage">
+            <i class="fa-solid fa-xmark fa-2xl closeNavPage"></i>
+            <div class="titleNavPage">
+                <i class="fa-solid fa-money-bill-transfer fa-xl navIcon"></i>
+                <h2>Nova transferência</h2>
+            </div>
+
+            <div class="transferData step-one">
+                <label>Pagar para</label>
+                <input type="text" class="transferInputData nameInput" placeholder="Nome de usuário" id="userTransferData">
+            </div>
+            <div class="cashSend step-one">
+                <span>R$</span>
+                <input type="number" class="transferInputData cashInput" placeholder="00.00" id="cashTransferData">
+            </div>
+
+            <div class="otpContainer step-two">
+                <p>Insira seu código de segurança</p>
+                <img src="./imgs/keyilu.svg" alt="" srcset="">
+                <div class="otpInputContainer">
+                    <input type="number" required class="otpInput" id="otpOne">
+                    <input type="number" required disabled class="otpInput" id="otpTwo">
+                    <input type="number" required disabled class="otpInput" id="otpThree">
+                    <input type="number" required disabled class="otpInput" id="otpFour">
+                    <i class="fa-solid fa-trash fa-lg" id="eraseOtp"></i>
+                </div>
+            </div>
+
+            <button class="continueButton step-one">Continuar</button>
+            <button id="transferButton" class="step-two" disabled>Transferir</button>
+            <span class="loadingTransfer"></span>
+        </article>
+    </div>
+
+    <div class="errorNotify notify">
+        <i class="fa-solid fa-circle-xmark fa-lg"></i>
+        <p id="errorMessage"></p>
+    </div>
+    <div class="sucessNotify notify">
+        <i class="fa-solid fa-circle-check fa-lg"></i>
+        <p id="sucessMessage"></p>
+    </div>
+
+    <footer>
+        <p>&copy; Cauê Guise Mondek - Todos os direitos reservados, <span id="ano"></span></p>
+    </footer>
+
+    <script src="./appUser.js"></script>
+</body>
+</html>
+

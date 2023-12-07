@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+
+    <link rel="stylesheet" href="./css/login.css">
+
+    <script src="https://kit.fontawesome.com/dc49a974a4.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine&family=Inder&family=Manrope:wght@200;500&family=Montserrat:wght@200;300;500&family=Noto+Sans+JP:wght@200;400;500&family=Nunito&family=Poppins:wght@200;300;500;700;800&family=Roboto:wght@100;400&family=Sen:wght@700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <main>
+        
+        <div class="welcomeContainer">
+            <div class="paragraph">
+                <h1>O banco no qual se pode <span style="color: #f16d25;">confiar</span> !</h1>
+                <h2>Entre em sua conta para continuar.</h2>
+            </div>
+    
+        </div>
+        <article class="loginContainer">
+            <form method="post" class="loginform">
+                <div class="inputsform">
+                    <i class="fa-regular fa-user iconDescription"></i>
+                    <input type="text" name="user" class="inputUser" required>
+                    <label>Usuário</label>
+                </div>
+                <div class="inputsform">
+                    <i class="fa-solid fa-lock iconDescription"></i>
+                    <input type="password" name="password" class="inputPassword" required>
+                    <i class="fa-solid fa-eye viewPassword" style="color: #ffffffaf;"></i>
+                    <label>Senha</label>
+                </div>
+                <div class="error">
+                    <p id="error"><%= errorLogin %></p>
+                </div>
+                <div class="submitsform">
+                    <input type="submit" name="acao" value="Entrar" min="1">
+                    <a href="/register">Cadastre-se</a>
+                </div>
+            </form>
+            <img src="./imgs/loginilu.svg" alt="" srcset="" class="ilustrationIMG">
+        </article>
+    </main>
+    <footer>
+        <p>&copy; Cauê Guise Mondek - Todos os direitos reservados, <span id="ano"></span></p>
+    </footer>
+
+    <script src="./appLogin.js"></script>
+</body>
+</html>

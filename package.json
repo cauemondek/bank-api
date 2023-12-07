@@ -1,0 +1,23 @@
+{
+  "name": "api-bank",
+  "version": "1.0.0",
+  "description": "A API for Bank, with Login, Transfer and Data Change",
+  "main": "server.cjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cauê Mondek",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^6.2.0",
+    "mongoose": "^8.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "prettier": "3.1.0"
+  }
+}
