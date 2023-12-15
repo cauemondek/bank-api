@@ -24,16 +24,13 @@
 ## ✔ Project features
 
 `✨ Feature 1`: Database for login and user data
-
+![LoginDatabase](https://github.com/cauemondek/bank-api/assets/121320616/2aa310d8-7176-40c1-97a4-092432fcc63d)
 
 `✨ Feature 2`: Update your account data
+![UserChange](https://github.com/cauemondek/bank-api/assets/121320616/7c27f451-88d7-46e2-aba1-eab848267bd7)
 
+`✨ Feature 3`: Transfers and OTP Verification
+![UserTransfer](https://github.com/cauemondek/bank-api/assets/121320616/b752508b-1e3c-403e-bfbb-41721acafc65)
 
-`✨ Feature 2a`: Delete your account
-
-
-`✨ Feature 3`: Transfers
-
-
-`✨ Feature 4`: OTP Verification
-
+`✨ Feature 4`: Delete your account
+![UserDelete](https://github.com/cauemondek/bank-api/assets/121320616/3aaf23f4-42a1-4d88-920d-bd1630a2cf1c)
